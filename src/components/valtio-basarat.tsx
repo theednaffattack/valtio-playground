@@ -1,17 +1,19 @@
 import { useSnapshot } from "valtio";
-import { Idea } from "./idea";
-import { createIdeaState } from "./idea-state";
-import { ideasState } from "./ideas-state";
+import { Idea } from "../idea";
+import { createIdeaState } from "../idea-state";
+import { ideasState } from "../ideas-state";
+import { UpperNav } from "./upper-nav";
 
 const ideaOne = createIdeaState();
 const ideaTwo = createIdeaState();
 
-export function ValtioDemo() {
+export function ValtioBasarat() {
   const ideaOneSnap = useSnapshot(ideaOne);
   const ideaTwoSnap = useSnapshot(ideaTwo);
   const snap = useSnapshot(ideasState);
   return (
     <>
+      <UpperNav />
       <div className="valtio-demo">
         <Idea {...ideaOneSnap} />
         <Idea {...ideaTwoSnap} />
