@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { FourOhFour } from "../pages/four-oh-four";
 import { Home } from "../pages/home";
-import { ValtioDemo } from "../valtio-demo";
+import { ValtioDemo } from "../pages/valtio-demo";
 import "./App.css";
 
 export function App() {
